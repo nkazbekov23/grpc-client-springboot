@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.grpc.server.springboot.grpcserver;
+
+message SomeRequest {
+  string value = 1;
+}
+
+message SomeResponse {
+  string value = 1;
+}
+
+service GrpcServerService {
+  rpc req(SomeRequest) returns (SomeResponse);
+}
