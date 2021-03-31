@@ -19,4 +19,9 @@ public class GrpsController {
     public String reqClient(@RequestParam(defaultValue = "client") String value) {
         return grpcClientService.client(value);
     }
+
+    @GetMapping("/test")
+    public String getStringForTest() {
+        return "hello test";
+    }
 }
